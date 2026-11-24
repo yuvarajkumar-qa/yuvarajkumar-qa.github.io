@@ -4,9 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YUVARAJKUMAR V — Senior QA Engineer &amp; SDET</title>
+  <meta
+    name="description"
+    content="Senior QA Engineer & SDET with 5 years of experience in Playwright, Python, PyTest, REST API, SQL, JMeter, and AI-assisted test automation across automotive, healthcare, and IoT platforms."
+  />
+
+  <!-- Open Graph / Social Preview Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="YUVARAJKUMAR V — Senior QA Engineer &amp; SDET" />
+  <meta
+    property="og:description"
+    content="Bridging the gap between code and confidence. 5 years automating web, mobile, API, SQL, and performance workflows with Playwright, Python, PyTest & Claude AI."
+  />
+  <meta property="og:url" content="https://yuvarajkumar-qa.github.io/" />
+  <meta property="og:image" content="https://yuvarajkumar-qa.github.io/assets/profile.jpg" />
+
+  <!-- Non-blocking Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
 
   <style>
     /* =========================================================================
@@ -19,9 +46,11 @@
       --bg-hover: #262626;
       --accent-red: #E50914;
       --accent-red-hover: #F40612;
+      --accent-blue: #0A66C2;
+      --accent-blue-hover: #004182;
       --text-primary: #FFFFFF;
       --text-secondary: #B3B3B3;
-      --text-muted: #808080;
+      --text-muted: #8C8C8C;
       --border-subtle: rgba(255, 255, 255, 0.14);
       --border-focus: #FFFFFF;
       --font-display: 'Bebas Neue', Impact, sans-serif;
@@ -71,16 +100,16 @@
       outline-offset: 3px;
     }
 
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
 
     /* =========================================================================
@@ -98,7 +127,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1.5rem;
-      background: linear-gradient(180deg, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0) 100%);
+      background: linear-gradient(180deg, rgba(20, 20, 20, 0.92) 0%, rgba(20, 20, 20, 0) 100%);
       transition: background-color 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
     }
 
@@ -111,6 +140,14 @@
       display: flex;
       align-items: center;
       gap: clamp(1.25rem, 3vw, 2.75rem);
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 821px) {
+      .navbar__left {
+        justify-content: flex-start;
+      }
     }
 
     .brand-logo {
@@ -127,7 +164,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 1.35rem;
       list-style: none;
     }
 
@@ -142,53 +179,6 @@
     .nav-links a:hover,
     .nav-links a:focus-visible {
       color: var(--text-primary);
-    }
-
-    .navbar__right {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .profile-switcher-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.32rem 0.65rem 0.32rem 0.35rem;
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .profile-switcher-btn:hover {
-      background: rgba(255, 255, 255, 0.16);
-      border-color: rgba(255, 255, 255, 0.35);
-    }
-
-    .profile-badge-avatar {
-      width: 26px;
-      height: 26px;
-      border-radius: 4px;
-      background: var(--accent-red);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.72rem;
-      font-weight: 700;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .profile-badge-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
     }
 
     .menu-toggle {
@@ -227,10 +217,6 @@
       .menu-toggle {
         display: inline-flex;
       }
-
-      .profile-switcher-text {
-        display: none;
-      }
     }
 
     /* =========================================================================
@@ -238,7 +224,7 @@
        ========================================================================= */
     .hero {
       position: relative;
-      min-height: min(90vh, 800px);
+      min-height: min(88vh, 780px);
       display: flex;
       align-items: center;
       padding: 6.75rem var(--container-px) 4.5rem;
@@ -263,18 +249,15 @@
       transition: transform 1.2s var(--ease-smooth), opacity 0.6s ease;
     }
 
-    .hero__vignette-left {
+    /* Combined hero vignette overlay */
+    .hero__vignette {
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(90deg, #141414 0%, rgba(20, 20, 20, 0.88) 46%, rgba(20, 20, 20, 0.38) 80%, rgba(20, 20, 20, 0.68) 100%);
-    }
-
-    .hero__vignette-bottom {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background: linear-gradient(180deg, rgba(20, 20, 20, 0.45) 0%, rgba(20, 20, 20, 0.08) 45%, #141414 100%);
+      background:
+        linear-gradient(90deg, #141414 0%, rgba(20, 20, 20, 0.88) 46%, rgba(20, 20, 20, 0.38) 80%, rgba(20, 20, 20, 0.68) 100%),
+        linear-gradient(180deg, rgba(20, 20, 20, 0.45) 0%, rgba(20, 20, 20, 0.08) 45%, #141414 100%);
+      pointer-events: none;
     }
 
     .hero__inner {
@@ -289,7 +272,7 @@
     }
 
     .hero__content {
-      max-width: 660px;
+      max-width: 680px;
     }
 
     @keyframes heroFadeUp {
@@ -303,34 +286,21 @@
       }
     }
 
-    .hero__hook {
-      font-size: clamp(0.95rem, 1.5vw, 1.12rem);
-      font-weight: 700;
-      color: #FFD1D4;
-      letter-spacing: 0.01em;
-      margin-bottom: 0.65rem;
-    }
-
     .hero__eyebrow {
       display: inline-flex;
-      flex-wrap: wrap;
       align-items: center;
-      gap: 0.55rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
     }
 
     .hero__eyebrow-pill {
       background: var(--accent-red);
       color: var(--text-primary);
-      padding: 0.18rem 0.55rem;
-      border-radius: 2px;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
+      padding: 0.24rem 0.65rem;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
     }
 
     .hero__title {
@@ -339,7 +309,7 @@
       line-height: 0.96;
       letter-spacing: 0.02em;
       color: var(--text-primary);
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.5rem;
       text-shadow: 0 8px 28px rgba(0, 0, 0, 0.65);
     }
 
@@ -347,7 +317,7 @@
       font-size: clamp(1rem, 1.8vw, 1.25rem);
       font-weight: 600;
       color: #F5F5F5;
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.95rem;
     }
 
     .hero__role-tagline span {
@@ -358,8 +328,8 @@
     .hero__pitch {
       font-size: clamp(0.98rem, 1.35vw, 1.12rem);
       color: var(--text-secondary);
-      max-width: 58ch;
-      margin-bottom: 1.65rem;
+      max-width: 60ch;
+      margin-bottom: 1.75rem;
     }
 
     .hero__actions {
@@ -444,6 +414,15 @@
       background-color: var(--accent-red-hover);
     }
 
+    .btn--blue {
+      background-color: var(--accent-blue);
+      color: var(--text-primary);
+    }
+
+    .btn--blue:hover {
+      background-color: var(--accent-blue-hover);
+    }
+
     /* =========================================================================
        4. CAROUSEL ROWS & HOVER CARDS
        ========================================================================= */
@@ -466,6 +445,7 @@
       align-items: baseline;
       justify-content: space-between;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .row-section__title {
@@ -542,7 +522,7 @@
     }
 
     .media-card {
-      flex: 0 0 clamp(255px, 27vw, 330px);
+      flex: 0 0 clamp(260px, 27vw, 335px);
       background-color: var(--bg-card);
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -622,36 +602,20 @@
       line-height: 1.3;
     }
 
+    .media-card__subtitle {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: #D4D4D4;
+    }
+
     .media-card__desc {
       font-size: 0.82rem;
       color: var(--text-secondary);
       line-height: 1.45;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
-    }
-
-    .progress-track {
-      width: 100%;
-      height: 4px;
-      background: rgba(255, 255, 255, 0.16);
-      border-radius: 999px;
-      overflow: hidden;
-      margin-top: 0.15rem;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: var(--accent-red);
-      border-radius: 999px;
-    }
-
-    .progress-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.72rem;
-      color: var(--text-muted);
     }
 
     .media-card__tags {
@@ -693,10 +657,72 @@
     }
 
     /* =========================================================================
-       5. TOP 10 SKILLS ROW (BIG OUTLINED NUMBERS 1-10)
+       5. HOW I WORK (4-STEP QA WORKFLOW ROW)
+       ========================================================================= */
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(230px, 1fr));
+      gap: 1rem;
+      padding: 0.5rem var(--container-px) 1rem;
+    }
+
+    @media (max-width: 1050px) {
+      .workflow-grid {
+        grid-template-columns: repeat(2, minmax(230px, 1fr));
+      }
+    }
+
+    @media (max-width: 580px) {
+      .workflow-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .workflow-card {
+      background: linear-gradient(165deg, #222222 0%, #191919 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      transition: transform 0.25s var(--ease-smooth), border-color 0.25s ease;
+    }
+
+    .workflow-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(229, 9, 20, 0.55);
+    }
+
+    .workflow-card__step {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--accent-red);
+    }
+
+    .workflow-card__title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .workflow-card__desc {
+      font-size: 0.83rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* =========================================================================
+       6. TOP 10 TOOLKIT & CONTINUOUS LEARNING
        ========================================================================= */
     .top10-card {
-      flex: 0 0 clamp(210px, 21vw, 255px);
+      flex: 0 0 clamp(215px, 21vw, 260px);
       display: flex;
       align-items: flex-end;
       position: relative;
@@ -740,7 +766,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.45rem;
-      min-height: 158px;
+      min-height: 162px;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.55);
     }
 
@@ -764,70 +790,50 @@
       line-height: 1.4;
     }
 
-    /* =========================================================================
-       6. CRITICS' REVIEWS (TESTIMONIALS ROW)
-       ========================================================================= */
-    .review-card {
-      flex: 0 0 clamp(285px, 31vw, 370px);
-      background: linear-gradient(160deg, #222222 0%, #191919 100%);
-      border: 1px solid rgba(255, 255, 255, 0.09);
+    .credentials-bar {
+      padding: 0.65rem var(--container-px) 0;
+    }
+
+    .credentials-box {
+      background: var(--bg-elevated);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-md);
-      padding: 1.25rem;
+      padding: 1.1rem 1.25rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 1rem;
-      scroll-snap-align: start;
-      transition: transform 0.25s var(--ease-smooth), border-color 0.25s ease;
+      gap: 0.75rem;
     }
 
-    .review-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 255, 255, 0.24);
-    }
-
-    .review-card__top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-    }
-
-    .review-card__stars {
-      color: #E50914;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-    }
-
-    .review-card__badge {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    .review-card__quote {
-      font-size: 0.88rem;
-      color: #E6E6E6;
-      line-height: 1.55;
-      font-style: italic;
-    }
-
-    .review-card__author {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 0.75rem;
-    }
-
-    .review-card__name {
-      font-size: 0.9rem;
+    .credentials-box__title {
+      font-size: 0.82rem;
       font-weight: 700;
-      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
     }
 
-    .review-card__role {
-      font-size: 0.76rem;
-      color: var(--text-secondary);
+    .credentials-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .credential-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #EAEAEA;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.36rem 0.7rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .credential-pill span {
+      color: var(--accent-red);
+      font-weight: 700;
     }
 
     /* =========================================================================
@@ -1000,50 +1006,105 @@
     }
 
     /* =========================================================================
-       8. NETFLIX-STYLED FOOTER & CTA
+       8. CENTERED CONTACT SECTION & FOOTER
        ========================================================================= */
     .footer {
       background: #0d0d0d;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 3.5rem var(--container-px) 2.5rem;
+      padding: 4rem var(--container-px) 2.5rem;
       color: var(--text-secondary);
     }
 
+    .footer__cta-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
     .footer__cta-box {
-      max-width: 780px;
-      margin-bottom: 2.75rem;
-      padding: 1.75rem;
-      background: linear-gradient(90deg, rgba(229, 9, 20, 0.16) 0%, rgba(31, 31, 31, 0.92) 70%);
-      border: 1px solid rgba(229, 9, 20, 0.35);
+      width: 100%;
+      max-width: 640px;
+      text-align: center;
+      padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 4vw, 2.5rem);
+      background: radial-gradient(circle at top, rgba(229, 9, 20, 0.2) 0%, rgba(28, 28, 28, 0.96) 72%);
+      border: 1px solid rgba(229, 9, 20, 0.38);
       border-radius: var(--radius-md);
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer__cta-subtitle {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.45rem;
     }
 
     .footer__cta-heading {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-size: clamp(2.1rem, 4.5vw, 3.15rem);
       letter-spacing: 0.03em;
       color: var(--text-primary);
-      line-height: 1.05;
-      margin-bottom: 0.5rem;
+      line-height: 1.04;
+      margin-bottom: 0.85rem;
     }
 
-    .footer__cta-copy {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
+    .footer__hire-callout {
+      display: inline-block;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(229, 9, 20, 0.18);
+      border: 1px solid rgba(229, 9, 20, 0.55);
+      color: #FF6B73;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       margin-bottom: 1.15rem;
-      max-width: 58ch;
+    }
+
+    .footer__divider {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__divider::before,
+    .footer__divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.14);
     }
 
     .footer__cta-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      justify-content: center;
+      gap: 0.85rem;
+      width: 100%;
+    }
+
+    .footer__cta-actions .btn {
+      min-width: 165px;
     }
 
     .footer__top-line {
+      text-align: center;
       font-size: 0.9rem;
       color: var(--text-secondary);
-      margin-bottom: 1.35rem;
+      margin-bottom: 1.75rem;
     }
 
     .footer__top-line a {
@@ -1053,7 +1114,7 @@
 
     .footer__links-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 0.85rem 1.5rem;
       margin-bottom: 2rem;
       font-size: 0.84rem;
@@ -1080,30 +1141,6 @@
       font-size: 0.78rem;
       color: var(--text-muted);
     }
-
-    /* Toast feedback */
-    .toast {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      z-index: 2500;
-      background: #222222;
-      color: var(--text-primary);
-      border-left: 4px solid var(--accent-red);
-      padding: 0.8rem 1.15rem;
-      border-radius: var(--radius-sm);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75);
-      font-size: 0.86rem;
-      opacity: 0;
-      transform: translateY(12px);
-      pointer-events: none;
-      transition: opacity 0.25s ease, transform 0.25s ease;
-    }
-
-    .toast.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 <body>
@@ -1126,25 +1163,13 @@
       <nav aria-label="Primary Navigation">
         <ul id="navLinks" class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#row-trending">Projects</a></li>
-          <li><a href="#row-top10">Skills</a></li>
-          <li><a href="#row-bts">Experience</a></li>
+          <li><a href="#row-value">Capabilities</a></li>
+          <li><a href="#row-workflow">How I Work</a></li>
+          <li><a href="#row-top10">Toolkit</a></li>
+          <li><a href="#row-experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </div>
-
-    <div class="navbar__right">
-      <button type="button" id="switchProfileBtn" class="profile-switcher-btn" title="Switch viewer lens (Recruiter / Client / Collaborator)">
-        <span id="activeProfileBadge" class="profile-badge-avatar">
-          <img
-            src="assets/profile.jpg"
-            alt="Yuvarajkumar V"
-            onerror="this.style.display='none'; this.parentElement.textContent='R';"
-          />
-        </span>
-        <span id="activeProfileLabel" class="profile-switcher-text">Recruiter</span>
-      </button>
     </div>
   </header>
 
@@ -1161,30 +1186,26 @@
           alt=""
         />
       </div>
-      <div class="hero__vignette-left" aria-hidden="true"></div>
-      <div class="hero__vignette-bottom" aria-hidden="true"></div>
+      <div class="hero__vignette" aria-hidden="true"></div>
 
       <div class="hero__inner">
         <div class="hero__content">
-         <!-- <p class="hero__hook">Are you ready to find who is your next QA?</p> -->
-
           <div class="hero__eyebrow">
             <span class="hero__eyebrow-pill">5 YOE &bull; QA &amp; SDET</span>
-            <span id="heroProfileContext">Viewing as Recruiter</span>
           </div>
 
           <h1 id="heroTitle" class="hero__title">YUVARAJKUMAR V</h1>
-          <p class="hero__role-tagline">Quality Analyst &amp; SDET &mdash; <span>Bridging gap between code and confidence</span></p>
-          <p id="heroPitch" class="hero__pitch">
-            5 years automating web, mobile, API, SQL, and performance workflows across automotive, healthcare, and IoT platforms using Python, Playwright, PyTest, and Claude AI to cut regression cycles by up to 80%.
+          <p class="hero__role-tagline">Quality Analyst &amp; SDET &mdash; <span>Bridging the gap between code and confidence</span></p>
+          <p class="hero__pitch">
+            5 years of hands-on QA and SDET ownership across automotive, healthcare, and IoT platforms—architecting scalable Playwright, Python, PyTest, REST API, SQL, and JMeter suites with AI-assisted workflows that cut regression time by 80% and protect production releases with zero critical defects.
           </p>
 
           <div class="hero__actions">
-            <button type="button" id="playShowreelBtn" class="btn btn--white">
+            <button type="button" id="playKnowMeBtn" class="btn btn--white">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <polygon points="5 3 19 12 5 21 5 3" />
               </svg>
-              <span>Play Showreel</span>
+              <span>Play / Know Me</span>
             </button>
 
             <button type="button" id="heroMoreInfoBtn" class="btn btn--grey">
@@ -1209,85 +1230,75 @@
     </section>
 
     <!-- =====================================================================
-         3. NETFLIX CAROUSEL ROWS
+         3. RESUME-GROUNDED PORTFOLIO SECTIONS
          ===================================================================== -->
     <div class="catalog">
 
-      <!-- ROW 1: TRENDING NOW (6 BEST PROJECTS) -->
-      <section id="row-trending" class="row-section" aria-labelledby="title-trending">
+      <!-- SECTION 1: WHAT I BRING TO THE TABLE -->
+      <section id="row-value" class="row-section" aria-labelledby="title-value">
         <div class="row-section__header">
-          <h2 id="title-trending" class="row-section__title">Trending Now</h2>
-          <span class="row-section__sub">6 Featured QA &amp; Automation Projects</span>
+          <h2 id="title-value" class="row-section__title">What I Bring to the Table</h2>
+          <span class="row-section__sub">End-to-End Automation, Shift-Left QA, API/SQL, Performance &amp; CI/CD Gates</span>
         </div>
         <div class="carousel-wrapper">
-          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-trending" aria-label="Scroll Trending Now left">&lsaquo;</button>
-          <div id="track-trending" class="carousel-track" role="region" aria-label="Trending Now Projects"></div>
-          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-trending" aria-label="Scroll Trending Now right">&rsaquo;</button>
+          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-value" aria-label="Scroll What I Bring to the Table left">&lsaquo;</button>
+          <div id="track-value" class="carousel-track" role="region" aria-label="What I Bring to the Table"></div>
+          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-value" aria-label="Scroll What I Bring to the Table right">&rsaquo;</button>
         </div>
       </section>
 
-      <!-- ROW 2: CONTINUE WATCHING (ONGOING PROJECTS WITH PROGRESS BARS) -->
-      <section id="row-continue" class="row-section" aria-labelledby="title-continue">
+      <!-- SECTION 2: HOW I WORK -->
+      <section id="row-workflow" class="row-section" aria-labelledby="title-workflow">
         <div class="row-section__header">
-          <h2 id="title-continue" class="row-section__title">Continue Watching</h2>
-          <span class="row-section__sub">Active Engineering &amp; Portfolio Tracks</span>
+          <h2 id="title-workflow" class="row-section__title">How I Work</h2>
+          <span class="row-section__sub">4-Step Structured QA &amp; Release Verification Workflow</span>
         </div>
-        <div class="carousel-wrapper">
-          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-continue" aria-label="Scroll Continue Watching left">&lsaquo;</button>
-          <div id="track-continue" class="carousel-track" role="region" aria-label="Continue Watching Projects"></div>
-          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-continue" aria-label="Scroll Continue Watching right">&rsaquo;</button>
-        </div>
+        <div id="grid-workflow" class="workflow-grid" role="region" aria-label="4-Step QA Workflow"></div>
       </section>
 
-      <!-- ROW 3: TOP 10 SKILLS (OUTLINED NUMBERS 1-10) -->
+      <!-- SECTION 3: TOP 10 TOOLKIT & CONTINUOUS LEARNING -->
       <section id="row-top10" class="row-section" aria-labelledby="title-top10">
         <div class="row-section__header">
-          <h2 id="title-top10" class="row-section__title">Top 10 Skills</h2>
-          <span class="row-section__sub">Ranked Core Stack &amp; QA Engineering Capabilities</span>
+          <h2 id="title-top10" class="row-section__title">Top 10 Toolkit &amp; Continuous Learning</h2>
+          <span class="row-section__sub">Core Engineering Stack &amp; Verified Credentials</span>
         </div>
         <div class="carousel-wrapper">
-          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-top10" aria-label="Scroll Top 10 Skills left">&lsaquo;</button>
-          <div id="track-top10" class="carousel-track" role="region" aria-label="Top 10 Skills"></div>
-          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-top10" aria-label="Scroll Top 10 Skills right">&rsaquo;</button>
+          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-top10" aria-label="Scroll Top 10 Toolkit left">&lsaquo;</button>
+          <div id="track-top10" class="carousel-track" role="region" aria-label="Top 10 Toolkit"></div>
+          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-top10" aria-label="Scroll Top 10 Toolkit right">&rsaquo;</button>
+        </div>
+
+        <div class="credentials-bar">
+          <div class="credentials-box">
+            <div class="credentials-box__title">Verified Credentials &amp; Continuous Learning</div>
+            <div id="credentialsList" class="credentials-list"></div>
+          </div>
         </div>
       </section>
 
-      <!-- ROW 4: CLIENT WINS (CASE STUDIES WITH RESULTS) -->
-      <section id="row-wins" class="row-section" aria-labelledby="title-wins">
+      <!-- SECTION 4: WHERE I'VE WORKED -->
+      <section id="row-experience" class="row-section" aria-labelledby="title-experience">
         <div class="row-section__header">
-          <h2 id="title-wins" class="row-section__title">Client Wins</h2>
-          <span class="row-section__sub">Verified Domain &amp; Release Outcomes</span>
+          <h2 id="title-experience" class="row-section__title">Where I&rsquo;ve Worked</h2>
+          <span class="row-section__sub">5 Years Across Automotive, Healthcare Claims &amp; IoT Platforms</span>
         </div>
         <div class="carousel-wrapper">
-          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-wins" aria-label="Scroll Client Wins left">&lsaquo;</button>
-          <div id="track-wins" class="carousel-track" role="region" aria-label="Client Wins Case Studies"></div>
-          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-wins" aria-label="Scroll Client Wins right">&rsaquo;</button>
+          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-experience" aria-label="Scroll Where I've Worked left">&lsaquo;</button>
+          <div id="track-experience" class="carousel-track" role="region" aria-label="Employment History"></div>
+          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-experience" aria-label="Scroll Where I've Worked right">&rsaquo;</button>
         </div>
       </section>
 
-      <!-- ROW 5: BEHIND THE SCENES (STORY, TOOLS & PROCESS) -->
-      <section id="row-bts" class="row-section" aria-labelledby="title-bts">
+      <!-- SECTION 5: ENGINEERING CRAFT & FOUNDATIONS -->
+      <section id="row-craft" class="row-section" aria-labelledby="title-craft">
         <div class="row-section__header">
-          <h2 id="title-bts" class="row-section__title">Behind The Scenes</h2>
-          <span class="row-section__sub">Career Journey, Toolchain &amp; Quality Workflow</span>
+          <h2 id="title-craft" class="row-section__title">Engineering Craft &amp; Foundations</h2>
+          <span class="row-section__sub">Open-Source GitHub Suites, Triage Discipline &amp; Academic Credentials</span>
         </div>
         <div class="carousel-wrapper">
-          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-bts" aria-label="Scroll Behind The Scenes left">&lsaquo;</button>
-          <div id="track-bts" class="carousel-track" role="region" aria-label="Behind The Scenes Story and Process"></div>
-          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-bts" aria-label="Scroll Behind The Scenes right">&rsaquo;</button>
-        </div>
-      </section>
-
-      <!-- ROW 6: CRITICS' REVIEWS (TESTIMONIALS WITH STAR RATINGS) -->
-      <section id="row-reviews" class="row-section" aria-labelledby="title-reviews">
-        <div class="row-section__header">
-          <h2 id="title-reviews" class="row-section__title">Critics&rsquo; Reviews</h2>
-          <span class="row-section__sub">Stakeholder, Lead &amp; Peer Feedback</span>
-        </div>
-        <div class="carousel-wrapper">
-          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-reviews" aria-label="Scroll Critics Reviews left">&lsaquo;</button>
-          <div id="track-reviews" class="carousel-track" role="region" aria-label="Critics Reviews and Testimonials"></div>
-          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-reviews" aria-label="Scroll Critics Reviews right">&rsaquo;</button>
+          <button type="button" class="carousel-btn carousel-btn--prev" data-target="track-craft" aria-label="Scroll Engineering Craft left">&lsaquo;</button>
+          <div id="track-craft" class="carousel-track" role="region" aria-label="Engineering Craft and Foundations"></div>
+          <button type="button" class="carousel-btn carousel-btn--next" data-target="track-craft" aria-label="Scroll Engineering Craft right">&rsaquo;</button>
         </div>
       </section>
 
@@ -1302,7 +1313,7 @@
       <button type="button" id="modalCloseBtn" class="modal-close" aria-label="Close modal">&times;</button>
 
       <div class="modal-hero">
-        <img id="modalImg" src="" alt="" />
+        <img id="modalImg" alt="" />
       </div>
 
       <div class="modal-body">
@@ -1312,7 +1323,7 @@
           <span id="modalPeriod" class="modal-pill">2024 – 2026</span>
         </div>
 
-        <h2 id="modalTitle" class="modal-title">Project Title</h2>
+        <h2 id="modalTitle" class="modal-title">Title</h2>
         <p id="modalDesc" class="modal-desc">Detailed description goes here.</p>
 
         <div class="modal-grid">
@@ -1328,441 +1339,341 @@
 
         <div class="modal-actions">
           <a id="modalExternalLink" href="https://github.com/yuvarajkumar-qa" target="_blank" rel="noopener noreferrer" class="btn btn--red">
-            View Repository / Case Proof &rarr;
+            View in Detail &rarr;
           </a>
-          <button type="button" id="modalCopyInfoBtn" class="btn btn--grey">Copy Summary</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- =======================================================================
-       5. NETFLIX-STYLED FOOTER & CONTACT CTA
+       5. CENTERED CONTACT SECTION & FOOTER
        ======================================================================= -->
   <footer id="contact" class="footer">
-    <div class="footer__cta-box">
-      <h2 class="footer__cta-heading">Ready to start a new season? Let&rsquo;s talk.</h2>
-      <p class="footer__cta-copy">
-        Open to Senior QA / SDET and Test Automation opportunities with attested credentials, hands-on Playwright, Python, API, SQL, and JMeter execution, and clear release ownership.
-      </p>
-      <div class="footer__cta-actions">
-        <a href="mailto:yuvarajkumar.qa@gmail.com" class="btn btn--red">Email Yuvarajkumar V</a>
-        <a href="https://www.linkedin.com/in/yuvarajkumar-qa/" target="_blank" rel="noopener noreferrer" class="btn btn--white">LinkedIn Profile</a>
-        <button type="button" id="copyPhoneBtn" class="btn btn--grey">Copy Phone: +91 9791713109</button>
+    <div class="footer__cta-wrap">
+      <div class="footer__cta-box">
+        <p class="footer__cta-subtitle">Let&rsquo;s work together</p>
+        <h2 class="footer__cta-heading">Ready to get back your confidence?</h2>
+        <span class="footer__hire-callout">Hire Me</span>
+        <div class="footer__divider">For contact</div>
+        <div class="footer__cta-actions">
+          <a href="mailto:yuvarajkumar.qa@gmail.com" class="btn btn--red">Email</a>
+          <a href="https://www.linkedin.com/in/yuvarajkumar-qa/" target="_blank" rel="noopener noreferrer" class="btn btn--blue">LinkedIn</a>
+        </div>
       </div>
     </div>
 
     <p class="footer__top-line">
-      Direct Contact? <a href="mailto:yuvarajkumar.qa@gmail.com">yuvarajkumar.qa@gmail.com</a> &bull;
-      <a href="tel:+919791713109">+91 9791713109</a> &bull; Coimbatore, Tamil Nadu
+      Direct Email: <a href="mailto:yuvarajkumar.qa@gmail.com">yuvarajkumar.qa@gmail.com</a> &bull;
+      Coimbatore, Tamil Nadu &bull; M.Sc. Degree Fully Attested (UAE &amp; Global Ready)
     </p>
 
     <div class="footer__links-grid" aria-label="Footer Links">
       <a href="#home">Home</a>
-      <a href="#row-trending">Trending Projects</a>
-      <a href="#row-continue">Continue Watching</a>
-      <a href="#row-top10">Top 10 Skills</a>
-      <a href="#row-wins">Client Wins</a>
-      <a href="#row-bts">Behind The Scenes</a>
-      <a href="#row-reviews">Critics&rsquo; Reviews</a>
+      <a href="#row-value">What I Bring to the Table</a>
+      <a href="#row-workflow">How I Work</a>
+      <a href="#row-top10">Top 10 Toolkit</a>
+      <a href="#row-experience">Where I&rsquo;ve Worked</a>
+      <a href="#row-craft">Engineering Craft &amp; Foundations</a>
       <a href="https://github.com/yuvarajkumar-qa" target="_blank" rel="noopener noreferrer">GitHub Portfolio</a>
       <a href="https://www.linkedin.com/in/yuvarajkumar-qa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="mailto:yuvarajkumar.qa@gmail.com">Send Email</a>
-      <a href="#home" id="footerCycleLens">Switch Lens</a>
-      <a href="#contact">Availability &amp; Relocation</a>
     </div>
 
     <div class="footer__bottom">
-      <span>YUVARAJKUMAR V &bull; Quality Analyst &amp; SDET &bull; Bridging gap between code and confidence</span>
+      <span>YUVARAJKUMAR V &bull; Senior QA Engineer &amp; SDET &bull; Bridging the gap between code and confidence</span>
       <span>&copy; <span id="yearSpan">2026</span> Yuvarajkumar V. All rights reserved.</span>
     </div>
   </footer>
-
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <!-- =========================================================================
        6. VANILLA JAVASCRIPT DATA & INTERACTIVITY
        ========================================================================= -->
   <script>
     /* -----------------------------------------------------------------------
-       A. DATA MODEL
+       A. RESUME-GROUNDED DATA MODEL
        ----------------------------------------------------------------------- */
-    const PROFILE_ORDER = ["Recruiter", "Client", "Collaborator"];
-
-    const PROFILE_MODES = {
-      Recruiter: {
-        badge: "R",
-        eyebrow: "Viewing as Recruiter • 5 YOE QA & SDET",
-        pitch: "5 years of hands-on QA and test automation experience across automotive, healthcare, and IoT platforms using Python, Playwright, PyTest, API, SQL, and JMeter—cutting regression time by 80% with Claude AI workflows."
-      },
-      Client: {
-        badge: "C",
-        eyebrow: "Viewing as Client • Release Confidence & ROI",
-        pitch: "Predictable, low-defect releases across web, mobile, API, and regulated data pipelines—combining shift-left test design, SQL reconciliation, and CI/CD quality gates to protect production stability."
-      },
-      Collaborator: {
-        badge: "D",
-        eyebrow: "Viewing as Collaborator • Frameworks & Engineering",
-        pitch: "Clean Page Object Model architectures, deterministic PyTest fixtures, CI pipeline reporting, and practical AI-assisted test generation built to scale alongside modern engineering teams."
-      }
-    };
-
-    const TRENDING_PROJECTS = [
+    const VALUE_PILLARS = [
       {
-        id: "proj-playwright-e2e",
-        title: "Playwright + PyTest E2E Suite",
-        badge: "Featured Suite",
-        period: "Portfolio • GitHub",
-        match: "99% Core Stack",
-        summary: "Modular Python, Playwright, and PyTest framework using Page Object Model, reusable fixtures, smoke/regression markers, and GitHub Actions HTML reports.",
+        id: "val-e2e-automation",
+        title: "End-to-End Test Automation",
+        badge: "80% Faster Regression",
+        period: "Playwright • Python • PyTest",
+        match: "Core SDET Strength",
+        summary: "Architecting modular Playwright, Python, and PyTest suites using Page Object Model, reusable fixtures, and Claude AI workflows in VS Code to slash regression cycles by 80%.",
         image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=900&q=80",
-        alt: "Code editor showing automated test scripts and modular architecture",
-        tags: ["Playwright", "Python", "PyTest", "GitHub Actions"],
-        tools: ["Python", "Playwright", "PyTest", "Page Object Model", "GitHub Actions", "HTML Reports"],
+        alt: "Code editor showing automated Playwright and PyTest suites",
+        tags: ["Playwright", "Python", "PyTest", "Claude AI", "POM"],
+        tools: ["Playwright", "Python", "PyTest (Fixtures & POM)", "Claude AI in VS Code", "Appium", "LambdaTest"],
         results: [
-          "Structured POM architecture covering login, inventory, and checkout journeys",
-          "Automated smoke and regression test execution in GitHub Actions CI",
-          "Published reproducible bug reports and risk-based test strategy artifacts"
+          "Cut regression execution time by 80% using Claude AI-assisted Playwright workflows",
+          "Built cross-browser and iOS/Android mobile automation with Appium and LambdaTest",
+          "Structured deterministic smoke and regression suites with clean HTML reporting"
         ],
         link: "https://github.com/yuvarajkumar-qa/playwright-pytest-qa-portfolio"
       },
       {
-        id: "proj-api-sql",
-        title: "REST API & SQL Data Integrity",
-        badge: "Backend QA",
-        period: "Portfolio • GitHub",
-        match: "97% Data Match",
-        summary: "Automated REST API functional and negative validation paired with SQL persistence checks and settled-revenue aggregation verification in CI.",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
-        alt: "Server and database pipeline infrastructure visualization",
-        tags: ["REST API", "SQL", "PyTest", "CI/CD"],
-        tools: ["Python requests", "PyTest", "SQLite / PostgreSQL", "JSON/XML Schema", "GitHub Actions"],
+        id: "val-shift-left",
+        title: "Manual & Shift-Left QA",
+        badge: "45% Fewer Spec Gaps",
+        period: "Agile • RTM • UAT",
+        match: "Zero Critical Defects",
+        summary: "Partnering early with product, BAs, and developers during sprint planning to eliminate requirement ambiguity, enforce 100% RTM coverage, and own production release sign-offs.",
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
+        alt: "Cross-functional team collaborating on sprint requirements",
+        tags: ["Shift-Left", "100% RTM", "BVA / State Design", "UAT"],
+        tools: ["Shift-Left Testing", "Requirement Traceability Matrix", "BVA & Equivalence Partitioning", "Jira Dashboards", "UAT"],
         results: [
-          "Validated positive and negative HTTP status codes (200, 201, 404) and payload schemas",
-          "Verified database persistence and revenue reconciliation across order states",
-          "Integrated automated API and DB assertions into CI workflows"
+          "Reduced sprint requirement gaps by 45% through early user-story refinement",
+          "Achieved zero critical production defects across release cycles",
+          "Led 100+ client sprint reviews, UAT sessions, and weekend release sign-offs"
+        ],
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
+      },
+      {
+        id: "val-api-sql",
+        title: "REST API & SQL Data Integrity",
+        badge: "Backend Verification",
+        period: "Postman • PostgreSQL • PyTest",
+        match: "Field-Level Accuracy",
+        summary: "Validating REST API status codes, JSON/XML schemas, and business logic alongside complex PostgreSQL/SQL joins, aggregations, and financial/data reconciliation.",
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+        alt: "Database and API backend validation infrastructure",
+        tags: ["REST API", "Postman", "PostgreSQL", "Data Reconciliation"],
+        tools: ["Postman", "Python requests", "PostgreSQL", "SQL Joins & Aggregations", "JSON/XML Schema"],
+        results: [
+          "Verified backend persistence, ETL transformations, and settled-revenue aggregations",
+          "Automated positive and negative REST API checks (200, 201, 404) before UI integration",
+          "Validated regulated EDI 837I/835 healthcare claims and automotive BOM analytics"
         ],
         link: "https://github.com/yuvarajkumar-qa/api-sql-quality-framework"
       },
       {
-        id: "proj-jmeter-perf",
-        title: "JMeter Load & Stress Benchmark",
-        badge: "Performance",
-        period: "Portfolio • GitHub",
-        match: "96% Perf Match",
-        summary: "Parameterized Apache JMeter load test plans executed via CLI with p95/p99 latency analysis, error-rate tracking, and concurrency bottleneck triage.",
+        id: "val-jmeter-perf",
+        title: "Performance & Load Testing",
+        badge: "JMeter & Bottleneck RCA",
+        period: "Load • Stress • Spike",
+        match: "p95 / p99 Telemetry",
+        summary: "Designing parameterized Apache JMeter test plans executed via non-GUI CLI to benchmark concurrency behavior, p95/p99 latency, and error thresholds prior to scale.",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
-        alt: "Performance analytics dashboard displaying latency and throughput metrics",
-        tags: ["JMeter", "CLI Load Test", "p95/p99", "Bottleneck RCA"],
-        tools: ["Apache JMeter (.jmx)", "Non-GUI CLI", "Latency & Error Telemetry", "Concurrency Profiling"],
+        alt: "Performance analytics dashboard displaying latency metrics",
+        tags: ["Apache JMeter", "CLI Execution", "p95/p99 Latency", "Stress Testing"],
+        tools: ["Apache JMeter (.jmx)", "Non-GUI CLI Runs", "Latency & Throughput Analysis", "Concurrency Profiling"],
         results: [
-          "Built parameterized JMeter test plans for repeatable non-GUI CLI execution",
-          "Documented p95/p99 response times, error thresholds, and concurrency behavior",
-          "Delivered actionable bottleneck triage notes for engineering optimization"
+          "Built repeatable parameterized JMeter load, stress, and spike test plans",
+          "Isolated concurrency bottlenecks with actionable p95/p99 latency triage notes",
+          "Complemented software load runs with environmental stress testing on IoT hardware"
         ],
         link: "https://github.com/yuvarajkumar-qa/jmeter-performance-testing"
       },
       {
-        id: "proj-auto-digital-twin",
-        title: "Automotive Digital Twin & PLM QA",
-        badge: "Automotive",
-        period: "Sep 2024 – Aug 2026",
-        match: "98% Domain Match",
-        summary: "End-to-end Playwright, Python/PyTest, SQL, and Postman validation across digital twin benchmarking, teardown/cost engineering, PLM, and BOM analytics.",
+        id: "val-cicd-gates",
+        title: "CI/CD Quality Gates",
+        badge: "GitHub & Azure DevOps",
+        period: "Continuous Verification",
+        match: "Automated Release Guard",
+        summary: "Integrating smoke, regression, API, and SQL checks directly into GitHub Actions and Azure DevOps pipelines with published HTML artifacts for fast merge confidence.",
+        image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=900&q=80",
+        alt: "Version control and CI/CD pipeline workflow",
+        tags: ["GitHub Actions", "Azure DevOps", "Quality Gates", "HTML Reports"],
+        tools: ["Git", "GitHub Actions", "Azure DevOps", "PyTest CI Markers", "HTML Report Artifacts"],
+        results: [
+          "Automated smoke and regression execution on repository pushes and pull requests",
+          "Published downloadable HTML test execution reports inside CI workflows",
+          "Enforced clean defect triage boundaries to protect sprint velocity"
+        ],
+        link: "https://github.com/yuvarajkumar-qa"
+      }
+    ];
+
+    const HOW_I_WORK_STEPS = [
+      {
+        step: "Step 01",
+        title: "Requirement Analysis & Gap Finding",
+        desc: "Review user stories, acceptance criteria, and edge cases early with BAs and developers—building a 100% Requirement Traceability Matrix (RTM) to close spec gaps before code is written."
+      },
+      {
+        step: "Step 02",
+        title: "Test Case & Automation Design",
+        desc: "Apply BVA, equivalence partitioning, and state-transition design, then architect modular Page Object Model suites in Playwright, Python, and PyTest accelerated by Claude AI."
+      },
+      {
+        step: "Step 03",
+        title: "Test Execution, API/SQL Verification & Bug Logging",
+        desc: "Execute UI, mobile, REST API (Postman), PostgreSQL data-integrity, and JMeter load suites—logging reproducible defects backed by traces, logs, and SQL proof."
+      },
+      {
+        step: "Step 04",
+        title: "Reporting, Retesting & Release Sign-Off",
+        desc: "Isolate true regressions during triage, verify fixes across CI/CD quality gates and UAT sessions, and deliver transparent go/no-go release sign-off reports."
+      }
+    ];
+
+    const TOP_10_TOOLKIT = [
+      { rank: 1, cat: "UI Automation", title: "Playwright", desc: "Cross-browser E2E automation, resilient locators, fixtures, and trace debugging." },
+      { rank: 2, cat: "Programming", title: "Python", desc: "Scalable test frameworks, API/DB validation scripts, and reusable automation utilities." },
+      { rank: 3, cat: "Test Framework", title: "PyTest", desc: "Page Object Model, fixtures, parametrization, smoke/regression markers, and CI reports." },
+      { rank: 4, cat: "API Validation", title: "Postman & REST API", desc: "Functional & negative HTTP checks, JSON/XML schema verification, and auth workflows." },
+      { rank: 5, cat: "Backend Data", title: "PostgreSQL & SQL", desc: "Complex joins, aggregations, field-level data integrity, and revenue reconciliation." },
+      { rank: 6, cat: "Performance", title: "Apache JMeter", desc: "Parameterised load, stress, and spike testing via CLI with p95/p99 bottleneck RCA." },
+      { rank: 7, cat: "AI-Assisted QA", title: "Claude AI & VS Code", desc: "Accelerated test authoring, refactoring, and edge-case expansion—cutting regression by 80%." },
+      { rank: 8, cat: "CI/CD & DevOps", title: "GitHub & Azure DevOps", desc: "Automated CI quality gates, branching workflows, and HTML test report artifacts." },
+      { rank: 9, cat: "Mobile & Cloud", title: "Appium & LambdaTest", desc: "Android/iOS mobile app automation and cross-browser/device matrix verification." },
+      { rank: 10, cat: "QA Governance", title: "Jira, Confluence & RTM", desc: "Shift-left refinement, defect triage discipline, sprint dashboards, and release sign-off." }
+    ];
+
+    const CREDENTIALS_LIST = [
+      { title: "Playwright with Python and Pytest", issuer: "LinkedIn Learning" },
+      { title: "API Testing Learning Path", issuer: "Postman" },
+      { title: "Introduction to JMeter", issuer: "Simplilearn" },
+      { title: "GitHub Foundations", issuer: "Simplilearn" },
+      { title: "Introduction to SQL", issuer: "Simplilearn" },
+      { title: "Introduction to Claude Cowork", issuer: "Claude Academy" }
+    ];
+
+    const WORK_EXPERIENCE = [
+      {
+        id: "exp-contentrix",
+        title: "Contentrix Private Limited",
+        subtitle: "Quality Analyst - L2 • Automotive Domain (formerly Telecomatics)",
+        badge: "Sep 2024 – Aug 2026",
+        period: "Coimbatore, India",
+        match: "80% Faster Regression",
+        summary: "Engineered Playwright + Python/PyTest suites with Claude AI in VS Code across digital twin benchmarking, teardown/cost engineering, PLM, and BOM analytics, cutting regression time by 80%.",
         image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
-        alt: "Modern software engineering workspace with analytics screens",
-        tags: ["Playwright", "PostgreSQL", "Postman", "PLM / BOM"],
+        alt: "Automotive engineering analytics and QA automation workspace",
+        tags: ["Playwright", "Python / PyTest", "PostgreSQL", "Claude AI", "PLM / BOM"],
         tools: ["Playwright", "Python", "PyTest", "PostgreSQL", "Postman", "Claude AI in VS Code"],
         results: [
-          "Cut regression execution time by 80% using Claude AI-assisted Playwright workflows",
-          "Validated complex PostgreSQL joins, aggregations, and BOM data transformations",
-          "Maintained 100% Requirement Traceability Matrix (RTM) coverage across releases"
+          "Transitioned under an official corporate transfer from Telecomatics to Contentrix on July 1, 2025 with unchanged project ownership",
+          "Reduced regression execution time by 80% using Claude AI-assisted Playwright workflows",
+          "Executed complex PostgreSQL queries to validate backend data pipelines and BOM integrity",
+          "Maintained 100% RTM coverage, led client demos, reverse KT, and release sign-off reporting"
         ],
         link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       },
       {
-        id: "proj-healthcare-edi",
-        title: "Healthcare Claims & EDI 837I/835 QA",
-        badge: "Regulated Domain",
-        period: "Mar 2022 – Aug 2024",
-        match: "96% Compliance",
-        summary: "Quality assurance across outbound EDI 837I compilation, inbound EDI 835 remittance, Claim Aggregator, Form 235D, web/mobile apps, and automated IVR flows.",
+        id: "exp-sbna",
+        title: "SBNA Software Solutions",
+        subtitle: "Associate QA Engineer • US Healthcare & Claims Processing",
+        badge: "Mar 2022 – Aug 2024",
+        period: "Coimbatore, India",
+        match: "Zero Critical Defects",
+        summary: "Validated outbound EDI 837I compilation, inbound EDI 835 remittance, Claim Aggregator, Form 235D, web/mobile apps, and IVR workflows under HIPAA compliance—achieving zero critical production defects.",
         image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80",
-        alt: "Healthcare data and clinical software systems interface",
-        tags: ["EDI 837I / 835", "HIPAA", "Web & Mobile", "IVR"],
-        tools: ["EDI 837I / 835 Validation", "Web & iOS/Android QA", "IVR Testing", "Jira Dashboards", "UAT"],
+        alt: "Healthcare claims processing and clinical data systems",
+        tags: ["EDI 837I / 835", "HIPAA", "Web & Mobile", "IVR", "Shift-Left"],
+        tools: ["EDI 837I / 835 Validation", "Web & iOS/Android QA", "IVR Telephony QA", "Jira Dashboards", "UAT"],
         results: [
-          "Achieved zero critical production defects across release cycles",
-          "Reduced sprint requirement gaps by 45% through shift-left BA collaboration",
-          "Led 100+ client sprint reviews, UAT sessions, and release sign-offs"
+          "Reduced sprint requirement gaps by 45% through shift-left user story refinement with BAs",
+          "Coordinated a cross-functional developer/QA sub-team and built Jira executive release dashboards",
+          "Led 100+ client sprint reviews, UAT sessions, and weekend production deployment sign-offs",
+          "Achieved zero critical production defects across release cycles"
         ],
         link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       },
       {
-        id: "proj-iot-telemetry",
-        title: "IoT Cloud, FOTA & Sensor QA",
-        badge: "IoT & Embedded",
-        period: "Sep 2021 – Feb 2022",
-        match: "95% Hardware/Cloud",
-        summary: "Validation across IoT cloud platforms, iOS/Android companion apps, cellular telemetry, FOTA firmware rollouts, HaaS pipelines, and chamber stress tests.",
+        id: "exp-nimble",
+        title: "Nimble Wireless",
+        subtitle: "Trainee - Product Quality Analyst • IoT & Embedded Telemetry",
+        badge: "Sep 2021 – Feb 2022",
+        period: "Coimbatore, India",
+        match: "40% Fewer Field Bugs",
+        summary: "Executed end-to-end testing across IoT cloud platforms, iOS/Android apps, cellular telemetry, FOTA firmware rollouts, HaaS pipelines, and environmental chamber stress tests.",
         image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
-        alt: "Circuit board and hardware telemetry engineering close-up",
-        tags: ["IoT Telemetry", "FOTA", "Appium", "LambdaTest"],
-        tools: ["Appium", "LambdaTest", "Cellular & FOTA QA", "HaaS Pipelines", "Environmental Chamber Testing"],
+        alt: "IoT hardware sensors and embedded telemetry circuit board",
+        tags: ["IoT Telemetry", "FOTA", "Appium", "LambdaTest", "HaaS"],
+        tools: ["Appium", "LambdaTest", "Cellular & FOTA QA", "HaaS Pipelines", "Chamber Stress Testing"],
         results: [
-          "Reduced post-release device field failures by 40%",
-          "Caught firmware and telemetry synchronization edge cases prior to rollout",
-          "Built cross-browser and mobile test coverage with Appium and LambdaTest"
+          "Reduced post-release device field failures by 40% by isolating firmware and telemetry sync bugs early",
+          "Built foundational cross-browser and mobile test suites using Appium and LambdaTest",
+          "Conducted environmental heat/humidity chamber stress testing on wireless sensors"
         ],
         link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       }
     ];
 
-    const CONTINUE_WATCHING_ITEMS = [
+    const ENGINEERING_CRAFT = [
       {
-        id: "cw-allure-pages",
-        title: "Live Allure & HTML Reports on GitHub Pages",
-        badge: "In Progress",
-        period: "80% Complete",
-        progress: 80,
-        summary: "Publishing automated Playwright and PyTest execution reports to GitHub Pages with clean failure diagnostics and historical trend visibility.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
-        alt: "Analytics metrics and test reporting dashboard on screen",
-        tags: ["GitHub Pages", "Test Reporting", "CI Artifacts"],
-        tools: ["GitHub Actions", "GitHub Pages", "PyTest HTML / Allure", "Trace Logs"],
-        results: [
-          "Automated artifact publishing on every CI pipeline run",
-          "Direct report links planned for repository READMEs and CV"
-        ],
-        link: "https://github.com/yuvarajkumar-qa"
-      },
-      {
-        id: "cw-claude-qa-workflow",
-        title: "AI-Assisted Test Generation & Locator Hygiene",
-        badge: "Active R&D",
-        period: "85% Complete",
-        progress: 85,
-        summary: "Refining prompt-driven test generation, edge-case coverage expansion, and locator resilience in VS Code while keeping strict human code review.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
-        alt: "Artificial intelligence and code automation visual",
-        tags: ["Claude AI", "VS Code", "Playwright", "POM"],
-        tools: ["Claude AI", "VS Code", "Playwright", "Python", "PyTest"],
-        results: [
-          "Cut regression turnaround by 80% in automotive QA workflows",
-          "Standardized test review checklist so generated tests stay maintainable"
-        ],
-        link: "https://github.com/yuvarajkumar-qa"
-      },
-      {
-        id: "cw-bug-evidence-pack",
-        title: "Architecture Diagrams & Defect Evidence Pack",
-        badge: "In Progress",
-        period: "65% Complete",
-        progress: 65,
-        summary: "Curating end-to-end QA architecture diagrams paired with high-signal bug reports containing reproduction steps, traces, and SQL proof.",
-        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80",
-        alt: "System architecture planning and technical documentation",
-        tags: ["RCA", "SQL Proof", "Test Strategy"],
-        tools: ["Architecture Diagrams", "SQL Queries", "Playwright Traces", "Jira"],
-        results: [
-          "Pairs UI symptoms with backend database root-cause verification",
-          "Designed for fast technical walkthroughs with hiring managers"
-        ],
-        link: "https://github.com/yuvarajkumar-qa"
-      },
-      {
-        id: "cw-azure-devops-gates",
-        title: "Azure DevOps & GitHub Quality Gates",
-        badge: "Active Pipeline",
-        period: "75% Complete",
-        progress: 75,
-        summary: "Enforcing automated smoke, API, and schema checks prior to release merges across GitHub and Azure DevOps pipelines.",
-        image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=900&q=80",
-        alt: "Version control and continuous integration pipeline view",
-        tags: ["Azure DevOps", "GitHub", "Quality Gates"],
-        tools: ["GitHub Actions", "Azure DevOps", "PyTest", "Postman / Newman"],
-        results: [
-          "Blocks broken builds early before staging or production deployment",
-          "Supports multi-environment configuration and parallel test runs"
-        ],
-        link: "https://github.com/yuvarajkumar-qa"
-      }
-    ];
-
-    const TOP_10_SKILLS = [
-      { rank: 1, cat: "UI Automation", title: "Playwright", desc: "Cross-browser E2E automation, locators, fixtures, and resilient assertions." },
-      { rank: 2, cat: "Programming", title: "Python", desc: "Clean automation scripting, data helpers, test utilities, and framework code." },
-      { rank: 3, cat: "Test Runner", title: "PyTest", desc: "Page Object Model, fixtures, parametrization, markers, and CI reporting." },
-      { rank: 4, cat: "API Testing", title: "Postman & REST API", desc: "Status codes, JSON/XML schemas, auth flows, and negative boundary checks." },
-      { rank: 5, cat: "Backend Data", title: "SQL & PostgreSQL", desc: "Joins, aggregations, ETL/pipeline checks, and financial/data reconciliation." },
-      { rank: 6, cat: "Performance", title: "Apache JMeter", desc: "Load, stress, and spike testing with CLI runs and p95/p99 bottleneck analysis." },
-      { rank: 7, cat: "AI in QA", title: "Claude AI Workflows", desc: "Accelerated test authoring, refactoring, and edge-case brainstorming in VS Code." },
-      { rank: 8, cat: "CI/CD & SCM", title: "Git, GitHub & Azure DevOps", desc: "Branching, pull request checks, pipeline quality gates, and release workflows." },
-      { rank: 9, cat: "Mobile & Cross-Browser", title: "Appium & LambdaTest", desc: "Android/iOS mobile testing and cloud browser/device matrix verification." },
-      { rank: 10, cat: "Quality Strategy", title: "Shift-Left, RTM & RCA", desc: "Requirement traceability, boundary/state design, triage, and release sign-off." }
-    ];
-
-    const CLIENT_WINS = [
-      {
-        id: "win-80-regression",
-        title: "80% Regression Time Reduction",
-        badge: "Automotive QA",
-        period: "2024 – 2026",
-        match: "High Impact",
-        summary: "Combined modular Playwright + PyTest suites with Claude AI-assisted test authoring and maintenance in VS Code for automotive platforms.",
-        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80",
-        alt: "Engineering team reviewing sprint metrics and release readiness",
-        tags: ["80% Faster Regression", "Playwright", "Claude AI"],
-        tools: ["Playwright", "Python", "PyTest", "Claude AI", "VS Code"],
-        results: [
-          "Cut regression cycle time by 80% across core automotive workflows",
-          "Improved maintainability of test suites across PLM, BOM, and analytics modules"
-        ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
-      },
-      {
-        id: "win-zero-crit-defects",
-        title: "Zero Critical Production Defects",
-        badge: "Healthcare & Claims",
-        period: "2022 – 2024",
-        match: "100% Release Trust",
-        summary: "Enforced thorough pre-release verification, weekend deployment sign-offs, and EDI 837I/835 & HIPAA-aligned test coverage in healthcare claims.",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
-        alt: "Release checklist and quality sign-off planning workspace",
-        tags: ["Zero Sev-1 Bugs", "EDI 837I / 835", "UAT"],
-        tools: ["EDI 837I / 835", "Web & Mobile QA", "IVR Testing", "Jira"],
-        results: [
-          "Zero critical production defects across release cycles",
-          "Facilitated 100+ client sprint reviews, UAT cycles, and sign-off reports"
-        ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
-      },
-      {
-        id: "win-45-req-clarity",
-        title: "45% Fewer Requirement Gaps",
-        badge: "Shift-Left QA",
-        period: "2022 – 2024",
-        match: "Process Win",
-        summary: "Partnered early with business analysts during sprint refinement to spot ambiguous acceptance criteria and edge cases before coding began.",
-        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
-        alt: "Collaborators aligning on product specifications and acceptance criteria",
-        tags: ["Shift-Left", "Acceptance Criteria", "Jira"],
-        tools: ["Shift-Left Testing", "RTM", "Jira Dashboards", "Agile / Scrum"],
-        results: [
-          "Reduced sprint requirement gaps by 45%",
-          "Built Jira release-visibility dashboards for stakeholders and sub-teams"
-        ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
-      },
-      {
-        id: "win-40-field-failures",
-        title: "40% Fewer Device Field Failures",
-        badge: "IoT & Telemetry",
-        period: "2021 – 2022",
-        match: "Hardware + Cloud",
-        summary: "Caught cellular telemetry, FOTA firmware, and sensor environmental edge cases prior to deployment across IoT cloud and mobile apps.",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
-        alt: "Technical testing and systems verification environment",
-        tags: ["40% Fewer Field Bugs", "IoT / FOTA", "Appium"],
-        tools: ["Appium", "LambdaTest", "Telemetry & FOTA QA", "Chamber Stress Testing"],
-        results: [
-          "Reduced post-release device field failures by 40%",
-          "Strengthened hardware-to-cloud validation before customer rollout"
-        ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
-      }
-    ];
-
-    const BEHIND_THE_SCENES = [
-      {
-        id: "bts-origin",
-        title: "5-Year QA & Automation Arc",
-        badge: "Career Story",
-        period: "2021 – Present",
-        match: "Origin Story",
-        summary: "From IoT & telemetry testing at Nimble Wireless, to healthcare claims & shift-left leadership at SBNA, to Playwright & AI-accelerated QA at Contentrix.",
+        id: "craft-playwright-repo",
+        title: "Playwright + PyTest E2E Portfolio",
+        subtitle: "github.com/yuvarajkumar-qa/playwright-pytest-qa-portfolio",
+        badge: "Open-Source Suite",
+        period: "GitHub Actions CI",
+        match: "POM + HTML Reports",
+        summary: "Python, Playwright, and PyTest suite structured with Page Object Model (LoginPage, InventoryPage, CheckoutPage), smoke/regression markers, CI HTML artifacts, and risk-based test strategy.",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
-        alt: "Developer laptop displaying code and test automation tools",
-        tags: ["5 Years Experience", "Automotive", "Healthcare", "IoT"],
-        tools: ["Contentrix", "SBNA Software Solutions", "Nimble Wireless", "M.Sc. Applied Electronics"],
+        alt: "Laptop displaying Python and Playwright test framework code",
+        tags: ["Playwright", "Python", "PyTest", "GitHub Actions"],
+        tools: ["Python", "Playwright", "PyTest", "Page Object Model", "GitHub Actions"],
         results: [
-          "Continuous progression across IoT, regulated healthcare claims, and automotive platforms",
-          "M.Sc. in Applied Electronics & B.Sc. in Electronics and Communication Systems"
+          "Covers LoginPage, InventoryPage, and CheckoutPage with reusable PyTest fixtures",
+          "Runs smoke and regression suites automatically in GitHub Actions with HTML report artifacts",
+          "Includes documented risk-based test strategy and reproducible bug reports"
+        ],
+        link: "https://github.com/yuvarajkumar-qa/playwright-pytest-qa-portfolio"
+      },
+      {
+        id: "craft-api-sql-repo",
+        title: "API & SQL Quality Framework",
+        subtitle: "github.com/yuvarajkumar-qa/api-sql-quality-framework",
+        badge: "Open-Source Suite",
+        period: "REST + SQLite CI",
+        match: "Data Integrity",
+        summary: "Automated REST API functional and negative checks (200, 404, 201 using requests & PyTest) paired with SQLite persistence and settled-revenue aggregation validation in GitHub Actions.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+        alt: "Data reconciliation and API verification metrics",
+        tags: ["Python requests", "PyTest", "SQLite", "CI/CD"],
+        tools: ["Python requests", "PyTest", "SQLite", "GitHub Actions"],
+        results: [
+          "Validates HTTP 200, 201, and 404 API responses alongside database persistence",
+          "Verifies settled-revenue aggregation logic across PAID vs. FAILED order states",
+          "Fully automated inside GitHub Actions CI pipelines"
+        ],
+        link: "https://github.com/yuvarajkumar-qa/api-sql-quality-framework"
+      },
+      {
+        id: "craft-jmeter-repo",
+        title: "JMeter Performance Testing",
+        subtitle: "github.com/yuvarajkumar-qa/jmeter-performance-testing",
+        badge: "Open-Source Suite",
+        period: "Non-GUI CLI",
+        match: "p95 / p99 RCA",
+        summary: "Parameterized Apache JMeter load test plan (.jmx) with reproducible non-GUI CLI execution instructions and bottleneck triage notes covering p95/p99 latency and concurrency.",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+        alt: "Performance load testing and concurrency diagnostics",
+        tags: ["Apache JMeter", ".jmx Plan", "CLI Load Run", "p95/p99"],
+        tools: ["Apache JMeter", "CLI Non-GUI Runner", "Latency & Error Rate Analysis"],
+        results: [
+          "Parameterized .jmx test plan engineered for repeatable non-GUI CLI execution",
+          "Documents p95/p99 latency, error thresholds, and concurrency bottleneck triage"
+        ],
+        link: "https://github.com/yuvarajkumar-qa/jmeter-performance-testing"
+      },
+      {
+        id: "craft-triage-education",
+        title: "Triage Discipline & Academic Foundations",
+        subtitle: "M.Sc. Applied Electronics & B.Sc. Electronics & Communication",
+        badge: "Foundations",
+        period: "Attested Credentials",
+        match: "UAE & Global Ready",
+        summary: "M.Sc. in Applied Electronics (2021) and B.Sc. in Electronics & Communication Systems (2019) from RVS College, Coimbatore—with full SDM, MEA, UAE Embassy, and MOFA attestation.",
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+        alt: "Technical documentation and engineering study workspace",
+        tags: ["M.Sc. Applied Electronics", "MOFA Attested", "Root Cause Analysis"],
+        tools: ["M.Sc. Applied Electronics", "B.Sc. Electronics & Communication", "RTM & RCA Discipline"],
+        results: [
+          "M.Sc. Degree fully attested (SDM + MEA + UAE Embassy + MOFA) for immediate onboarding",
+          "Strong electronics and systems background supporting hardware, IoT, and software QA",
+          "Disciplined defect triage separating true regressions from pre-existing or out-of-scope items"
         ],
         link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
-      },
-      {
-        id: "bts-triage-discipline",
-        title: "Defect Triage & Scope Discipline",
-        badge: "Engineering Process",
-        period: "Daily Workflow",
-        match: "Signal Over Noise",
-        summary: "Separating true regressions from pre-existing issues or out-of-scope requests, backed by 100% RTM coverage, logs, and SQL evidence.",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
-        alt: "Team discussion around software quality and triage priorities",
-        tags: ["RCA", "100% RTM", "Sprint Velocity"],
-        tools: ["Requirement Traceability Matrix", "Root Cause Analysis", "SQL Queries", "Jira"],
-        results: [
-          "Protects sprint velocity and prevents misdirected engineering rework",
-          "Delivers clear go/no-go release sign-off reporting for stakeholders"
-        ],
-        link: "https://github.com/yuvarajkumar-qa"
-      },
-      {
-        id: "bts-certs",
-        title: "Continuous Learning & Credentials",
-        badge: "Certifications",
-        period: "Verified Courses",
-        match: "Upskilling",
-        summary: "Structured learning across Playwright with Python & PyTest, Postman API testing, JMeter, GitHub foundations, SQL, and Claude Cowork.",
-        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
-        alt: "Focused study and technical skill building setup",
-        tags: ["Playwright + PyTest", "Postman", "JMeter", "Claude Academy"],
-        tools: ["LinkedIn Learning", "Postman Academy", "Simplilearn", "Claude Academy"],
-        results: [
-          "Completed Playwright with Python & PyTest, Postman API, JMeter, GitHub, SQL & Claude Cowork",
-          "Applies structured courses directly into working GitHub repositories"
-        ],
-        link: "https://github.com/yuvarajkumar-qa"
       }
     ];
-
-/* const REVIEWS = [
-      {
-        stars: "★★★★★",
-        badge: "Engineering Lead • Placeholder",
-        quote: "“Yuvarajkumar brought structure and speed to our regression runs—turning brittle manual checks into clean Playwright and PyTest suites with clear root-cause notes.”",
-        name: "Engineering Lead [Replace Name]",
-        role: "Automotive & Platform Delivery • Placeholder Review"
-      },
-      {
-        stars: "★★★★★",
-        badge: "Product Stakeholder • Placeholder",
-        quote: "“Catching requirement gaps early in sprint refinement and verifying edge cases before release gave our team real confidence on every deployment.”",
-        name: "Product / Delivery Manager [Replace Name]",
-        role: "Healthcare & Enterprise QA • Placeholder Review"
-      },
-      {
-        stars: "★★★★★",
-        badge: "QA Peer • Placeholder",
-        quote: "“Strong command of API payloads, SQL checks, and test automation—fast to troubleshoot flaky runs and generous with reverse KT and documentation.”",
-        name: "Senior QA Colleague [Replace Name]",
-        role: "Test Automation & CI/CD • Placeholder Review"
-      },
-      {
-        stars: "★★★★★",
-        badge: "Systems Collaborator • Placeholder",
-        quote: "“Bridges test execution and backend reality well—whether checking database states or verifying release readiness under tight timelines.”",
-        name: "Technical Collaborator [Replace Name]",
-        role: "Full-Stack & QA Collaboration • Placeholder Review"
-      }
-    ]; */
 
     const ALL_MODAL_ITEMS = [
-      ...TRENDING_PROJECTS,
-      ...CONTINUE_WATCHING_ITEMS,
-      ...CLIENT_WINS,
-      ...BEHIND_THE_SCENES
+      ...VALUE_PILLARS,
+      ...WORK_EXPERIENCE,
+      ...ENGINEERING_CRAFT
     ];
 
     /* -----------------------------------------------------------------------
@@ -1776,18 +1687,10 @@
         .replace(/"/g, "&quot;");
     }
 
-    function renderStandardCard(item, showProgress = false) {
+    function renderMediaCard(item, ctaLabel = "View in Detail") {
       const tagsHtml = item.tags.map((t) => `<span class="tag-chip">${escapeHtml(t)}</span>`).join("");
-      const progressHtml = showProgress
-        ? `
-          <div class="progress-track" aria-hidden="true">
-            <div class="progress-fill" style="width: ${Number(item.progress) || 50}%;"></div>
-          </div>
-          <div class="progress-meta">
-            <span>${escapeHtml(item.period)}</span>
-            <span>${Number(item.progress) || 50}%</span>
-          </div>
-        `
+      const subtitleHtml = item.subtitle
+        ? `<p class="media-card__subtitle">${escapeHtml(item.subtitle)}</p>`
         : "";
 
       return `
@@ -1798,13 +1701,23 @@
           </div>
           <div class="media-card__body">
             <h3 class="media-card__title">${escapeHtml(item.title)}</h3>
+            ${subtitleHtml}
             <p class="media-card__desc">${escapeHtml(item.summary)}</p>
-            ${progressHtml}
             <div class="media-card__tags">${tagsHtml}</div>
             <button type="button" class="media-card__cta" data-open-modal="${escapeHtml(item.id)}">
-              View Project
+              ${escapeHtml(ctaLabel)}
             </button>
           </div>
+        </article>
+      `;
+    }
+
+    function renderWorkflowStep(stepItem) {
+      return `
+        <article class="workflow-card" tabindex="0">
+          <span class="workflow-card__step">${escapeHtml(stepItem.step)}</span>
+          <h3 class="workflow-card__title">${escapeHtml(stepItem.title)}</h3>
+          <p class="workflow-card__desc">${escapeHtml(stepItem.desc)}</p>
         </article>
       `;
     }
@@ -1822,80 +1735,37 @@
       `;
     }
 
-    function renderReviewCard(review) {
+    function renderCredentialPill(cred) {
       return `
-        <article class="review-card" tabindex="0">
-          <div>
-            <div class="review-card__top">
-              <span class="review-card__stars" aria-label="5 out of 5 stars">${escapeHtml(review.stars)}</span>
-              <span class="review-card__badge">${escapeHtml(review.badge)}</span>
-            </div>
-            <p class="review-card__quote" style="margin-top: 0.75rem;">${escapeHtml(review.quote)}</p>
-          </div>
-          <div class="review-card__author">
-            <div class="review-card__name">${escapeHtml(review.name)}</div>
-            <div class="review-card__role">${escapeHtml(review.role)}</div>
-          </div>
-        </article>
+        <span class="credential-pill">
+          <span>&#10003;</span>
+          ${escapeHtml(cred.title)} &mdash; <strong>${escapeHtml(cred.issuer)}</strong>
+        </span>
       `;
     }
 
-    function initCatalog() {
-      document.getElementById("track-trending").innerHTML =
-        TRENDING_PROJECTS.map((item) => renderStandardCard(item, false)).join("");
+    function initPortfolio() {
+      document.getElementById("track-value").innerHTML =
+        VALUE_PILLARS.map((item) => renderMediaCard(item, "Explore Capability")).join("");
 
-      document.getElementById("track-continue").innerHTML =
-        CONTINUE_WATCHING_ITEMS.map((item) => renderStandardCard(item, true)).join("");
+      document.getElementById("grid-workflow").innerHTML =
+        HOW_I_WORK_STEPS.map(renderWorkflowStep).join("");
 
       document.getElementById("track-top10").innerHTML =
-        TOP_10_SKILLS.map(renderTop10Card).join("");
+        TOP_10_TOOLKIT.map(renderTop10Card).join("");
 
-      document.getElementById("track-wins").innerHTML =
-        CLIENT_WINS.map((item) => renderStandardCard(item, false)).join("");
+      document.getElementById("credentialsList").innerHTML =
+        CREDENTIALS_LIST.map(renderCredentialPill).join("");
 
-      document.getElementById("track-bts").innerHTML =
-        BEHIND_THE_SCENES.map((item) => renderStandardCard(item, false)).join("");
+      document.getElementById("track-experience").innerHTML =
+        WORK_EXPERIENCE.map((item) => renderMediaCard(item, "View Role Impact")).join("");
 
-      /* document.getElementById("track-reviews").innerHTML =
-        CRITICS_REVIEWS.map(renderReviewCard).join(""); */
+      document.getElementById("track-craft").innerHTML =
+        ENGINEERING_CRAFT.map((item) => renderMediaCard(item, "View Artifact")).join("");
     }
 
     /* -----------------------------------------------------------------------
-       C. VIEWER LENS SWITCHER (RECRUITER / CLIENT / COLLABORATOR)
-       ----------------------------------------------------------------------- */
-    const activeProfileLabel = document.getElementById("activeProfileLabel");
-    const heroProfileContext = document.getElementById("heroProfileContext");
-    const heroPitch = document.getElementById("heroPitch");
-    let currentProfileIndex = 0;
-
-    function applyProfile(profileName, notify = false) {
-      const idx = PROFILE_ORDER.indexOf(profileName);
-      currentProfileIndex = idx >= 0 ? idx : 0;
-      const activeName = PROFILE_ORDER[currentProfileIndex];
-      const config = PROFILE_MODES[activeName] || PROFILE_MODES.Recruiter;
-
-      activeProfileLabel.textContent = activeName;
-      heroProfileContext.textContent = config.eyebrow;
-      heroPitch.textContent = config.pitch;
-
-      if (notify) {
-        showToast(`Switched view to ${activeName}`);
-      }
-    }
-
-    function cycleProfileLens() {
-      const nextIndex = (currentProfileIndex + 1) % PROFILE_ORDER.length;
-      applyProfile(PROFILE_ORDER[nextIndex], true);
-    }
-
-    document.getElementById("switchProfileBtn").addEventListener("click", cycleProfileLens);
-    document.getElementById("footerCycleLens").addEventListener("click", (e) => {
-      e.preventDefault();
-      cycleProfileLens();
-    });
-
-    /* -----------------------------------------------------------------------
-       D. NAVBAR SCROLL & MOBILE MENU
+       C. NAVBAR SCROLL & MOBILE MENU
        ----------------------------------------------------------------------- */
     const navbar = document.getElementById("navbar");
     const menuToggle = document.getElementById("menuToggle");
@@ -1919,7 +1789,7 @@
     });
 
     /* -----------------------------------------------------------------------
-       E. CAROUSEL ARROWS & DRAG/TOUCH SUPPORT
+       D. CAROUSEL ARROWS & DRAG/TOUCH SUPPORT
        ----------------------------------------------------------------------- */
     document.querySelectorAll(".carousel-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -1968,7 +1838,7 @@
     });
 
     /* -----------------------------------------------------------------------
-       F. MODAL LOGIC
+       E. MODAL LOGIC
        ----------------------------------------------------------------------- */
     const modalBackdrop = document.getElementById("detailModal");
     const modalCloseBtn = document.getElementById("modalCloseBtn");
@@ -1981,16 +1851,13 @@
     const modalTools = document.getElementById("modalTools");
     const modalResults = document.getElementById("modalResults");
     const modalExternalLink = document.getElementById("modalExternalLink");
-    const modalCopyInfoBtn = document.getElementById("modalCopyInfoBtn");
 
-    let activeModalData = null;
     let lastFocusedElement = null;
 
     function openModalById(id) {
       const item = ALL_MODAL_ITEMS.find((entry) => entry.id === id);
       if (!item) return;
 
-      activeModalData = item;
       lastFocusedElement = document.activeElement;
 
       modalImg.src = item.image;
@@ -2046,52 +1913,18 @@
       if (e.target === modalBackdrop) closeModal();
     });
 
-    document.getElementById("playShowreelBtn").addEventListener("click", () => {
-      openModalById("proj-playwright-e2e");
+    document.getElementById("playKnowMeBtn").addEventListener("click", () => {
+      openModalById("val-e2e-automation");
     });
 
     document.getElementById("heroMoreInfoBtn").addEventListener("click", () => {
-      openModalById("bts-origin");
-    });
-
-    /* -----------------------------------------------------------------------
-       G. CLIPBOARD & TOAST HELPERS
-       ----------------------------------------------------------------------- */
-    const toastEl = document.getElementById("toast");
-    let toastTimer = null;
-
-    function showToast(message) {
-      toastEl.textContent = message;
-      toastEl.classList.add("is-visible");
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => {
-        toastEl.classList.remove("is-visible");
-      }, 2600);
-    }
-
-    async function copyText(text, successMsg) {
-      try {
-        await navigator.clipboard.writeText(text);
-        showToast(successMsg);
-      } catch {
-        showToast(text);
-      }
-    }
-
-    modalCopyInfoBtn.addEventListener("click", () => {
-      if (!activeModalData) return;
-      const summaryText = `${activeModalData.title} — ${activeModalData.summary} (${(activeModalData.tools || []).join(", ")})`;
-      copyText(summaryText, "Copied project summary to clipboard");
-    });
-
-    document.getElementById("copyPhoneBtn").addEventListener("click", () => {
-      copyText("+91 9791713109", "Copied phone number: +91 9791713109");
+      openModalById("exp-contentrix");
     });
 
     document.getElementById("yearSpan").textContent = String(new Date().getFullYear());
 
-    // Initialize catalog rows on load
-    initCatalog();
+    // Render all portfolio sections on load
+    initPortfolio();
   </script>
 </body>
 </html>
