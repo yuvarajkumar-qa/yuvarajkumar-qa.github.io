@@ -84,138 +84,7 @@
     }
 
     /* =========================================================================
-       2. PROFILE GATE ("WHO'S WATCHING?")
-       ========================================================================= */
-    .profile-gate {
-      position: fixed;
-      inset: 0;
-      z-index: 2000;
-      background: radial-gradient(circle at top, #222222 0%, #141414 70%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem var(--container-px);
-      transition: opacity 0.45s var(--ease-smooth), visibility 0.45s var(--ease-smooth);
-    }
-
-    .profile-gate.is-hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    .profile-gate__brand {
-      position: absolute;
-      top: 1.5rem;
-      left: var(--container-px);
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      letter-spacing: 0.08em;
-      color: var(--accent-red);
-      line-height: 1;
-    }
-
-    .profile-gate__title {
-      font-size: clamp(1.85rem, 4.5vw, 3.25rem);
-      font-weight: 500;
-      color: var(--text-primary);
-      margin-bottom: 2.25rem;
-      text-align: center;
-      letter-spacing: -0.02em;
-    }
-
-    .profile-gate__grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(110px, 170px));
-      gap: clamp(1.25rem, 4vw, 3rem);
-      justify-content: center;
-      width: 100%;
-      max-width: 680px;
-    }
-
-    .profile-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.85rem;
-      group: true;
-    }
-
-    .profile-card__avatar {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      border: 3px solid transparent;
-      transition: transform 0.28s var(--ease-smooth), border-color 0.28s var(--ease-smooth), box-shadow 0.28s var(--ease-smooth);
-    }
-
-    .profile-card__avatar--recruiter {
-      background: linear-gradient(135deg, #2d0b0e 0%, #831016 55%, #E50914 100%);
-    }
-
-    .profile-card__avatar--client {
-      background: linear-gradient(135deg, #0d253f 0%, #144d75 55%, #1d8cf8 100%);
-    }
-
-    .profile-card__avatar--collaborator {
-      background: linear-gradient(135deg, #1b2818 0%, #1f5c3a 55%, #2ecc71 100%);
-    }
-
-    .profile-card__icon {
-      width: 44%;
-      height: 44%;
-      color: rgba(255, 255, 255, 0.92);
-      transition: transform 0.28s var(--ease-smooth);
-    }
-
-    .profile-card__label {
-      font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-      color: var(--text-secondary);
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .profile-card:hover .profile-card__avatar,
-    .profile-card:focus-visible .profile-card__avatar {
-      transform: scale(1.05);
-      border-color: var(--text-primary);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65);
-    }
-
-    .profile-card:hover .profile-card__icon,
-    .profile-card:focus-visible .profile-card__icon {
-      transform: scale(1.06);
-    }
-
-    .profile-card:hover .profile-card__label,
-    .profile-card:focus-visible .profile-card__label {
-      color: var(--text-primary);
-    }
-
-    .profile-gate__skip {
-      margin-top: 2.5rem;
-      padding: 0.65rem 1.5rem;
-      border: 1px solid var(--text-muted);
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-
-    .profile-gate__skip:hover {
-      border-color: var(--text-primary);
-      color: var(--text-primary);
-    }
-
-    /* =========================================================================
-       3. TOP NAVIGATION BAR
+       2. TOP NAVIGATION BAR
        ========================================================================= */
     .navbar {
       position: fixed;
@@ -229,7 +98,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1.5rem;
-      background: linear-gradient(180deg, rgba(20, 20, 20, 0.88) 0%, rgba(20, 20, 20, 0) 100%);
+      background: linear-gradient(180deg, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0) 100%);
       transition: background-color 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
     }
 
@@ -300,9 +169,9 @@
       border-color: rgba(255, 255, 255, 0.35);
     }
 
-    .profile-badge-dot {
-      width: 24px;
-      height: 24px;
+    .profile-badge-avatar {
+      width: 26px;
+      height: 26px;
       border-radius: 4px;
       background: var(--accent-red);
       display: inline-flex;
@@ -310,6 +179,16 @@
       justify-content: center;
       font-size: 0.72rem;
       font-weight: 700;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .profile-badge-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     .menu-toggle {
@@ -355,14 +234,14 @@
     }
 
     /* =========================================================================
-       4. HERO BILLBOARD
+       3. HERO BILLBOARD
        ========================================================================= */
     .hero {
       position: relative;
-      min-height: min(88vh, 780px);
+      min-height: min(90vh, 800px);
       display: flex;
       align-items: center;
-      padding: 6.5rem var(--container-px) 4.5rem;
+      padding: 6.75rem var(--container-px) 4.5rem;
       overflow: hidden;
     }
 
@@ -384,12 +263,11 @@
       transition: transform 1.2s var(--ease-smooth), opacity 0.6s ease;
     }
 
-    /* Subtle Netflix-style vignette gradients over hero media */
     .hero__vignette-left {
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(90deg, #141414 0%, rgba(20, 20, 20, 0.88) 42%, rgba(20, 20, 20, 0.35) 78%, rgba(20, 20, 20, 0.65) 100%);
+      background: linear-gradient(90deg, #141414 0%, rgba(20, 20, 20, 0.88) 46%, rgba(20, 20, 20, 0.38) 80%, rgba(20, 20, 20, 0.68) 100%);
     }
 
     .hero__vignette-bottom {
@@ -399,11 +277,19 @@
       background: linear-gradient(180deg, rgba(20, 20, 20, 0.45) 0%, rgba(20, 20, 20, 0.08) 45%, #141414 100%);
     }
 
-    .hero__content {
+    .hero__inner {
       position: relative;
       z-index: 2;
-      max-width: 660px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
       animation: heroFadeUp 0.7s var(--ease-smooth) both;
+    }
+
+    .hero__content {
+      max-width: 660px;
     }
 
     @keyframes heroFadeUp {
@@ -417,10 +303,19 @@
       }
     }
 
+    .hero__hook {
+      font-size: clamp(0.95rem, 1.5vw, 1.12rem);
+      font-weight: 700;
+      color: #FFD1D4;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.65rem;
+    }
+
     .hero__eyebrow {
       display: inline-flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.55rem;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.14em;
@@ -432,7 +327,7 @@
     .hero__eyebrow-pill {
       background: var(--accent-red);
       color: var(--text-primary);
-      padding: 0.16rem 0.5rem;
+      padding: 0.18rem 0.55rem;
       border-radius: 2px;
       font-size: 0.7rem;
       letter-spacing: 0.08em;
@@ -472,6 +367,38 @@
       flex-wrap: wrap;
       gap: 0.85rem;
       align-items: center;
+    }
+
+    .hero__portrait-card {
+      flex: 0 0 auto;
+      width: clamp(180px, 20vw, 250px);
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.22);
+      background: var(--bg-card);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.78);
+    }
+
+    .hero__portrait-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .hero__inner {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .hero__portrait-card {
+        width: 132px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+      }
     }
 
     .btn {
@@ -518,7 +445,7 @@
     }
 
     /* =========================================================================
-       5. CAROUSEL ROWS & HOVER CARDS
+       4. CAROUSEL ROWS & HOVER CARDS
        ========================================================================= */
     .catalog {
       position: relative;
@@ -614,7 +541,6 @@
       }
     }
 
-    /* Standard Media Hover Card */
     .media-card {
       flex: 0 0 clamp(255px, 27vw, 330px);
       background-color: var(--bg-card);
@@ -656,7 +582,6 @@
       transform: scale(1.06);
     }
 
-    /* Subtle vignette gradient over card thumbnail */
     .media-card__thumb::after {
       content: "";
       position: absolute;
@@ -707,7 +632,6 @@
       overflow: hidden;
     }
 
-    /* Progress bar for "Continue Watching" */
     .progress-track {
       width: 100%;
       height: 4px;
@@ -769,7 +693,7 @@
     }
 
     /* =========================================================================
-       6. TOP 10 SKILLS ROW (BIG OUTLINED NUMBERS 1-10)
+       5. TOP 10 SKILLS ROW (BIG OUTLINED NUMBERS 1-10)
        ========================================================================= */
     .top10-card {
       flex: 0 0 clamp(210px, 21vw, 255px);
@@ -841,7 +765,7 @@
     }
 
     /* =========================================================================
-       7. CRITICS' REVIEWS (TESTIMONIALS ROW)
+       6. CRITICS' REVIEWS (TESTIMONIALS ROW)
        ========================================================================= */
     .review-card {
       flex: 0 0 clamp(285px, 31vw, 370px);
@@ -907,7 +831,7 @@
     }
 
     /* =========================================================================
-       8. DETAIL MODAL (NETFLIX-STYLE POPUP)
+       7. DETAIL MODAL (NETFLIX-STYLE POPUP)
        ========================================================================= */
     .modal-backdrop {
       position: fixed;
@@ -1076,7 +1000,7 @@
     }
 
     /* =========================================================================
-       9. NETFLIX-STYLED FOOTER & CTA
+       8. NETFLIX-STYLED FOOTER & CTA
        ========================================================================= */
     .footer {
       background: #0d0d0d;
@@ -1185,49 +1109,7 @@
 <body>
 
   <!-- =======================================================================
-       1. PROFILE SCREEN ("WHO'S WATCHING?")
-       ======================================================================= -->
-  <section id="profileGate" class="profile-gate" aria-label="Profile selection">
-    <div class="profile-gate__brand">YVFLIX</div>
-    <h1 class="profile-gate__title">Who&rsquo;s watching?</h1>
-
-    <div class="profile-gate__grid" role="list">
-      <button type="button" class="profile-card" data-profile="Recruiter" role="listitem">
-        <span class="profile-card__avatar profile-card__avatar--recruiter" aria-hidden="true">
-          <svg class="profile-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-            <circle cx="12" cy="7" r="4" />
-          </svg>
-        </span>
-        <span class="profile-card__label">Recruiter</span>
-      </button>
-
-      <button type="button" class="profile-card" data-profile="Client" role="listitem">
-        <span class="profile-card__avatar profile-card__avatar--client" aria-hidden="true">
-          <svg class="profile-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="2" y="7" width="20" height="14" rx="2" />
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-          </svg>
-        </span>
-        <span class="profile-card__label">Client</span>
-      </button>
-
-      <button type="button" class="profile-card" data-profile="Collaborator" role="listitem">
-        <span class="profile-card__avatar profile-card__avatar--collaborator" aria-hidden="true">
-          <svg class="profile-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <polyline points="16 18 22 12 16 6" />
-            <polyline points="8 6 2 12 8 18" />
-          </svg>
-        </span>
-        <span class="profile-card__label">Collaborator</span>
-      </button>
-    </div>
-
-    <button type="button" id="skipProfileBtn" class="profile-gate__skip">Enter Portfolio Directly</button>
-  </section>
-
-  <!-- =======================================================================
-       2. TOP NAVIGATION BAR
+       1. TOP NAVIGATION BAR
        ======================================================================= -->
   <header id="navbar" class="navbar">
     <div class="navbar__left">
@@ -1253,20 +1135,25 @@
     </div>
 
     <div class="navbar__right">
-      <button type="button" id="switchProfileBtn" class="profile-switcher-btn" title="Switch viewer profile">
-        <span id="activeProfileBadge" class="profile-badge-dot">R</span>
+      <button type="button" id="switchProfileBtn" class="profile-switcher-btn" title="Switch viewer lens (Recruiter / Client / Collaborator)">
+        <span id="activeProfileBadge" class="profile-badge-avatar">
+          <img
+            src="assets/profile.jpg"
+            alt="Yuvarajkumar V"
+            onerror="this.style.display='none'; this.parentElement.textContent='R';"
+          />
+        </span>
         <span id="activeProfileLabel" class="profile-switcher-text">Recruiter</span>
       </button>
     </div>
   </header>
 
   <!-- =======================================================================
-       3. HERO BILLBOARD
+       2. HERO BILLBOARD
        ======================================================================= -->
   <main id="home">
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero__media-wrap" aria-hidden="true">
-        <!-- REPLACE_ME: Swap with a custom high-res QA/engineering banner or looping MP4 video -->
         <img
           class="hero__bg-img"
           loading="eager"
@@ -1277,40 +1164,52 @@
       <div class="hero__vignette-left" aria-hidden="true"></div>
       <div class="hero__vignette-bottom" aria-hidden="true"></div>
 
-      <div class="hero__content">
-        <div class="hero__eyebrow">
-          <span class="hero__eyebrow-pill">5 YOE • QA &amp; SDET</span>
-          <span id="heroProfileContext">Viewing as Recruiter</span>
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__hook">Are you ready to find who is your next QA?</p>
+
+          <div class="hero__eyebrow">
+            <span class="hero__eyebrow-pill">5 YOE &bull; QA &amp; SDET</span>
+            <span id="heroProfileContext">Viewing as Recruiter</span>
+          </div>
+
+          <h1 id="heroTitle" class="hero__title">YUVARAJKUMAR V</h1>
+          <p class="hero__role-tagline">Quality Analyst &amp; SDET &mdash; <span>Bridging gap between code and confidence</span></p>
+          <p id="heroPitch" class="hero__pitch">
+            5 years automating web, mobile, API, SQL, and performance workflows across automotive, healthcare, and IoT platforms using Python, Playwright, PyTest, and Claude AI to cut regression cycles by up to 80%.
+          </p>
+
+          <div class="hero__actions">
+            <button type="button" id="playShowreelBtn" class="btn btn--white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+              <span>Play Showreel</span>
+            </button>
+
+            <button type="button" id="heroMoreInfoBtn" class="btn btn--grey">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="16" x2="12" y2="12" />
+                <line x1="12" y1="8" x2="12.01" y2="8" />
+              </svg>
+              <span>More Info</span>
+            </button>
+          </div>
         </div>
 
-        <h1 id="heroTitle" class="hero__title">YUVARAJKUMAR V</h1>
-        <p class="hero__role-tagline">Quality Analyst &amp; SDET — <span>Bridging gap between code and confidence</span></p>
-        <p id="heroPitch" class="hero__pitch">
-          5 years automating web, mobile, API, SQL, and performance workflows across automotive, healthcare, and IoT platforms using Python, Playwright, PyTest, and Claude AI to cut regression cycles by up to 80%.
-        </p>
-
-        <div class="hero__actions">
-          <button type="button" id="playShowreelBtn" class="btn btn--white">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <polygon points="5 3 19 12 5 21 5 3" />
-            </svg>
-            <span>Play Showreel</span>
-          </button>
-
-          <button type="button" id="heroMoreInfoBtn" class="btn btn--grey">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="16" x2="12" y2="12" />
-              <line x1="12" y1="8" x2="12.01" y2="8" />
-            </svg>
-            <span>More Info</span>
-          </button>
+        <div class="hero__portrait-card" aria-label="Yuvarajkumar V portrait">
+          <img
+            src="assets/profile.jpg"
+            alt="Yuvarajkumar V — Senior QA Engineer & SDET"
+            onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80';"
+          />
         </div>
       </div>
     </section>
 
     <!-- =====================================================================
-         4. NETFLIX CAROUSEL ROWS
+         3. NETFLIX CAROUSEL ROWS
          ===================================================================== -->
     <div class="catalog">
 
@@ -1396,7 +1295,7 @@
   </main>
 
   <!-- =======================================================================
-       5. DETAIL MODAL
+       4. DETAIL MODAL
        ======================================================================= -->
   <div id="detailModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-dialog">
@@ -1438,7 +1337,7 @@
   </div>
 
   <!-- =======================================================================
-       6. NETFLIX-STYLED FOOTER & CONTACT CTA
+       5. NETFLIX-STYLED FOOTER & CONTACT CTA
        ======================================================================= -->
   <footer id="contact" class="footer">
     <div class="footer__cta-box">
@@ -1469,7 +1368,7 @@
       <a href="https://github.com/yuvarajkumar-qa" target="_blank" rel="noopener noreferrer">GitHub Portfolio</a>
       <a href="https://www.linkedin.com/in/yuvarajkumar-qa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:yuvarajkumar.qa@gmail.com">Send Email</a>
-      <a href="#profileGate" id="footerSwitchProfile">Switch Profile</a>
+      <a href="#home" id="footerCycleLens">Switch Lens</a>
       <a href="#contact">Availability &amp; Relocation</a>
     </div>
 
@@ -1482,12 +1381,14 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <!-- =========================================================================
-       7. VANILLA JAVASCRIPT DATA & INTERACTIVITY
+       6. VANILLA JAVASCRIPT DATA & INTERACTIVITY
        ========================================================================= -->
   <script>
     /* -----------------------------------------------------------------------
-       A. DATA MODEL (REPLACE_ME comments mark areas for personal screenshots/links)
+       A. DATA MODEL
        ----------------------------------------------------------------------- */
+    const PROFILE_ORDER = ["Recruiter", "Client", "Collaborator"];
+
     const PROFILE_MODES = {
       Recruiter: {
         badge: "R",
@@ -1523,7 +1424,7 @@
           "Automated smoke and regression test execution in GitHub Actions CI",
           "Published reproducible bug reports and risk-based test strategy artifacts"
         ],
-        link: "https://github.com/yuvarajkumar-qa/playwright-pytest-qa-portfolio" // REPLACE_ME: Direct repo URL if needed
+        link: "https://github.com/yuvarajkumar-qa/playwright-pytest-qa-portfolio"
       },
       {
         id: "proj-api-sql",
@@ -1541,7 +1442,7 @@
           "Verified database persistence and revenue reconciliation across order states",
           "Integrated automated API and DB assertions into CI workflows"
         ],
-        link: "https://github.com/yuvarajkumar-qa/api-sql-quality-framework" // REPLACE_ME: Direct repo URL if needed
+        link: "https://github.com/yuvarajkumar-qa/api-sql-quality-framework"
       },
       {
         id: "proj-jmeter-perf",
@@ -1559,7 +1460,7 @@
           "Documented p95/p99 response times, error thresholds, and concurrency behavior",
           "Delivered actionable bottleneck triage notes for engineering optimization"
         ],
-        link: "https://github.com/yuvarajkumar-qa/jmeter-performance-testing" // REPLACE_ME: Direct repo URL if needed
+        link: "https://github.com/yuvarajkumar-qa/jmeter-performance-testing"
       },
       {
         id: "proj-auto-digital-twin",
@@ -1577,7 +1478,7 @@
           "Validated complex PostgreSQL joins, aggregations, and BOM data transformations",
           "Maintained 100% Requirement Traceability Matrix (RTM) coverage across releases"
         ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/" // REPLACE_ME: Case study or portfolio link
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       },
       {
         id: "proj-healthcare-edi",
@@ -1595,7 +1496,7 @@
           "Reduced sprint requirement gaps by 45% through shift-left BA collaboration",
           "Led 100+ client sprint reviews, UAT sessions, and release sign-offs"
         ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/" // REPLACE_ME: Case study or portfolio link
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       },
       {
         id: "proj-iot-telemetry",
@@ -1613,7 +1514,7 @@
           "Caught firmware and telemetry synchronization edge cases prior to rollout",
           "Built cross-browser and mobile test coverage with Appium and LambdaTest"
         ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/" // REPLACE_ME: Case study or portfolio link
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       }
     ];
 
@@ -1633,7 +1534,7 @@
           "Automated artifact publishing on every CI pipeline run",
           "Direct report links planned for repository READMEs and CV"
         ],
-        link: "https://github.com/yuvarajkumar-qa" // REPLACE_ME: Direct live report URL
+        link: "https://github.com/yuvarajkumar-qa"
       },
       {
         id: "cw-claude-qa-workflow",
@@ -1650,7 +1551,7 @@
           "Cut regression turnaround by 80% in automotive QA workflows",
           "Standardized test review checklist so generated tests stay maintainable"
         ],
-        link: "https://github.com/yuvarajkumar-qa" // REPLACE_ME: Link to AI QA notes or repo
+        link: "https://github.com/yuvarajkumar-qa"
       },
       {
         id: "cw-bug-evidence-pack",
@@ -1667,7 +1568,7 @@
           "Pairs UI symptoms with backend database root-cause verification",
           "Designed for fast technical walkthroughs with hiring managers"
         ],
-        link: "https://github.com/yuvarajkumar-qa" // REPLACE_ME: Link to architecture/bug report docs
+        link: "https://github.com/yuvarajkumar-qa"
       },
       {
         id: "cw-azure-devops-gates",
@@ -1684,7 +1585,7 @@
           "Blocks broken builds early before staging or production deployment",
           "Supports multi-environment configuration and parallel test runs"
         ],
-        link: "https://github.com/yuvarajkumar-qa" // REPLACE_ME: Link to pipeline workflow file
+        link: "https://github.com/yuvarajkumar-qa"
       }
     ];
 
@@ -1717,7 +1618,7 @@
           "Cut regression cycle time by 80% across core automotive workflows",
           "Improved maintainability of test suites across PLM, BOM, and analytics modules"
         ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/" // REPLACE_ME
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       },
       {
         id: "win-zero-crit-defects",
@@ -1734,7 +1635,7 @@
           "Zero critical production defects across release cycles",
           "Facilitated 100+ client sprint reviews, UAT cycles, and sign-off reports"
         ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/" // REPLACE_ME
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       },
       {
         id: "win-45-req-clarity",
@@ -1751,7 +1652,7 @@
           "Reduced sprint requirement gaps by 45%",
           "Built Jira release-visibility dashboards for stakeholders and sub-teams"
         ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/" // REPLACE_ME
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       },
       {
         id: "win-40-field-failures",
@@ -1768,7 +1669,7 @@
           "Reduced post-release device field failures by 40%",
           "Strengthened hardware-to-cloud validation before customer rollout"
         ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/" // REPLACE_ME
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       }
     ];
 
@@ -1788,7 +1689,7 @@
           "Continuous progression across IoT, regulated healthcare claims, and automotive platforms",
           "M.Sc. in Applied Electronics & B.Sc. in Electronics and Communication Systems"
         ],
-        link: "https://www.linkedin.com/in/yuvarajkumar-qa/" // REPLACE_ME
+        link: "https://www.linkedin.com/in/yuvarajkumar-qa/"
       },
       {
         id: "bts-triage-discipline",
@@ -1805,7 +1706,7 @@
           "Protects sprint velocity and prevents misdirected engineering rework",
           "Delivers clear go/no-go release sign-off reporting for stakeholders"
         ],
-        link: "https://github.com/yuvarajkumar-qa" // REPLACE_ME
+        link: "https://github.com/yuvarajkumar-qa"
       },
       {
         id: "bts-certs",
@@ -1822,11 +1723,10 @@
           "Completed Playwright with Python & PyTest, Postman API, JMeter, GitHub, SQL & Claude Cowork",
           "Applies structured courses directly into working GitHub repositories"
         ],
-        link: "https://github.com/yuvarajkumar-qa" // REPLACE_ME
+        link: "https://github.com/yuvarajkumar-qa"
       }
     ];
 
-    /* REPLACE_ME: Replace placeholder reviewer names/quotes with real quotes from leads, peers, or managers */
     const CRITICS_REVIEWS = [
       {
         stars: "★★★★★",
@@ -1961,44 +1861,37 @@
     }
 
     /* -----------------------------------------------------------------------
-       C. PROFILE GATE & PERSONALIZATION
+       C. VIEWER LENS SWITCHER (RECRUITER / CLIENT / COLLABORATOR)
        ----------------------------------------------------------------------- */
-    const profileGate = document.getElementById("profileGate");
-    const activeProfileBadge = document.getElementById("activeProfileBadge");
     const activeProfileLabel = document.getElementById("activeProfileLabel");
     const heroProfileContext = document.getElementById("heroProfileContext");
     const heroPitch = document.getElementById("heroPitch");
+    let currentProfileIndex = 0;
 
-    function applyProfile(profileName) {
-      const config = PROFILE_MODES[profileName] || PROFILE_MODES.Recruiter;
-      activeProfileBadge.textContent = config.badge;
-      activeProfileLabel.textContent = profileName;
+    function applyProfile(profileName, notify = false) {
+      const idx = PROFILE_ORDER.indexOf(profileName);
+      currentProfileIndex = idx >= 0 ? idx : 0;
+      const activeName = PROFILE_ORDER[currentProfileIndex];
+      const config = PROFILE_MODES[activeName] || PROFILE_MODES.Recruiter;
+
+      activeProfileLabel.textContent = activeName;
       heroProfileContext.textContent = config.eyebrow;
       heroPitch.textContent = config.pitch;
-      profileGate.classList.add("is-hidden");
-      document.body.style.overflow = "";
+
+      if (notify) {
+        showToast(`Switched view to ${activeName}`);
+      }
     }
 
-    function openProfileGate() {
-      profileGate.classList.remove("is-hidden");
-      const firstProfile = profileGate.querySelector(".profile-card");
-      if (firstProfile) firstProfile.focus();
+    function cycleProfileLens() {
+      const nextIndex = (currentProfileIndex + 1) % PROFILE_ORDER.length;
+      applyProfile(PROFILE_ORDER[nextIndex], true);
     }
 
-    document.querySelectorAll(".profile-card").forEach((card) => {
-      card.addEventListener("click", () => {
-        applyProfile(card.dataset.profile);
-      });
-    });
-
-    document.getElementById("skipProfileBtn").addEventListener("click", () => {
-      applyProfile("Recruiter");
-    });
-
-    document.getElementById("switchProfileBtn").addEventListener("click", openProfileGate);
-    document.getElementById("footerSwitchProfile").addEventListener("click", (e) => {
+    document.getElementById("switchProfileBtn").addEventListener("click", cycleProfileLens);
+    document.getElementById("footerCycleLens").addEventListener("click", (e) => {
       e.preventDefault();
-      openProfileGate();
+      cycleProfileLens();
     });
 
     /* -----------------------------------------------------------------------
