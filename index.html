@@ -1727,7 +1727,7 @@
       }
     ];
 
-    const CRITICS_REVIEWS = [
+/* const REVIEWS = [
       {
         stars: "★★★★★",
         badge: "Engineering Lead • Placeholder",
@@ -1756,7 +1756,7 @@
         name: "Technical Collaborator [Replace Name]",
         role: "Full-Stack & QA Collaboration • Placeholder Review"
       }
-    ];
+    ]; */
 
     const ALL_MODAL_ITEMS = [
       ...TRENDING_PROJECTS,
@@ -1856,8 +1856,8 @@
       document.getElementById("track-bts").innerHTML =
         BEHIND_THE_SCENES.map((item) => renderStandardCard(item, false)).join("");
 
-      document.getElementById("track-reviews").innerHTML =
-        CRITICS_REVIEWS.map(renderReviewCard).join("");
+      /* document.getElementById("track-reviews").innerHTML =
+        CRITICS_REVIEWS.map(renderReviewCard).join(""); */
     }
 
     /* -----------------------------------------------------------------------
